@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">Cozy Cafe</a>
+            <button class="menu-toggle" aria-label="Toggle menu">&#9776;</button>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home" class="items">Home</a> </li>
+                    <li><a href="#about" class="items">About</a> </li>
+                    <li><a href="#menu" class="items">Menu</a> </li>
+                    <li><a href="#contact" class="items">Contact</a> </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section id="home">
+            <h1>Welcome to Cozy Cafe</h1>
+            <p>Your local spot for fresh coffe, tasty treats and a warm atmosphere.</p>
+            <img src="cafeinterior.jpg" alt="cafe interior">
+        </section>
+        <section id="about">
+            <h1>About Us</h1>
+            <p>At Cozy Cafe, we believe in serving happiness in every cup.</p>
+            <img src="coffeeabout.jpg" alt="Coffe beans">
+        </section>
+        <section id="menu">
+            <h1>Our Menu</h1>
+            <p>Explore our selection of beverages and snacks crafted with love.</p>
+            <img src="cafemenu.jpg" alt="Cafe Menu">
+        </section>
+        <section id="contact">
+            <h1>Contact Us</h1>
+            <p>Visit us at Cozy Cafe for unforgettable experience. Have questions? Reach us at contact@cozycafe.com or call 123-456</p>
+            <img src="cafecontact.webp" alt="cafe contact">
+        </section>
+    </main>
+
+    <script>
+        const navbar=document.querySelector(".navbar");
+        const togglebutton=document.querySelector(".menu-toggle");
+        const navlinks=document.querySelector(".nav-links");
+        
+        window.addEventListener('scroll',()=>{
+            if(window.scrollY>50){
+                navbar.classList.add('scrolled');
+            }
+            else{
+                navbar.classList.remove('scrolled');
+            }
+        });
+        togglebutton.addEventListener('click',()=>{
+            navlinks.classList.toggle('open');
+        });
+
+    </script>
+</body>
+</html>
